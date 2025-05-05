@@ -156,15 +156,23 @@ console.log(arr15)//slice is a part of an array starting from array element 1
 //splice
 arr16=["jathin","kiran","murali","tharak","kishore"]
 arr16.splice(2,3,"sai","indigo") //here  2 represents in the 2nd place new element sould be added
-//where as 1 represents how many elements should be removed
+//where as 1 represents how many elements should be removed from the second element
 console.log(arr16)
 
 //map
+//array.map(callback(currentValue,index,array))
 let numbers = [1, 2, 5, 8];
 
 let doubled = numbers.map(num => num * 2);//It multiplies each number by 2.
 
 console.log(doubled); //[2, 4, 6, 10, 16]
+
+// reduce()
+//Executes a reducer function on each element of the array, resulting in a single output value.
+const num1 = [1, 2, 3, 4];
+const sum = num1.reduce((acc, curr) => acc + curr, 0);
+console.log(sum); // 10
+
 
 //filter
 let num = [1, 2, 3, 4, 5];

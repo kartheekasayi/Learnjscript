@@ -151,35 +151,44 @@ console.log(revstr)
 //slice is a part of an array starting from array element 1
 //if we give element no from there it should be started 
 arr14=[2,9,7,6,4,3]
-arr15=arr14.slice(4)
-console.log(arr15) //[ 4, 3 ]
+arr15=arr14.slice(2)
+console.log(arr15) //[ 4, 3 ] it will cut the array what ever remaining part is there it will give that part
 
-//splice
+
+//splice -- add the elements and remove the elements
 arr16=["jathin","kiran","murali","tharak","kishore"]
 arr16.splice(2,3,"sai","indigo") //here  2 represents in the 2nd place new element sould be added
 //where as 1 represents how many elements should be removed from the second element
 console.log(arr16) //[ 'jathin', 'kiran', 'sai', 'indigo' ]
 
-//map
+//map-- we have 1 array i want to iterate all the elements for that array for each element i want to do something
+//i want to multiple by 2
 //array.map(callback(currentValue,index,array))
 let numbers = [1, 2, 5, 8];
 
-let doubled = numbers.map(num => num * 2);//It multiplies each number by 2.
+let doubled = numbers.map(num => num / 2);//It multiplies each number by 2.
 
 console.log(doubled); //[2, 4, 6, 10, 16]
 
 // reduce()
 //Executes a reducer function on each element of the array, resulting in a single output value.
-const num1 = [1, 2, 3, 4];
-const sum = num1.reduce((acc, curr) => acc + curr, 0);
+const num1 = [1, 2, 3, 4]; //i want to iterate all the elements and finaly i want to do some logic and i want to get some particular value 
+const sum = num1.reduce((acc, curr) => acc + curr, 0);// here 0 is the inital value 0+1
 console.log(sum); // 10
+//(acc, curr) => acc + curr --function without name is a anonymous function that is arrow function
+
+// //filter
+// let num = [1, 2, 3, 4, 5]; //it is an array i want to get only odd numbers
+
+// let result = num.filter(num => num %2==0); //it will print all the even no's
+
+// let result = num.filter(num => num %2!==0);//it will get odd no's
+// console.log(result); // [4, 5]
+
+arr=["sai","raju","sai","sai","raju"]
+let result=arr.filter(ele=>ele=="sai");
+//let result = arr.filter(ele => ele === "sai" || ele === "raju");
+console.log(result)//[ 'sai', 'sai', 'sai' ]
 
 
-//filter
-let num = [1, 2, 3, 4, 5];
-
-let result = num.filter(num => num > 3);
-
-console.log(result); // [4, 5]
-
-
+//multiple conditions

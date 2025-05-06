@@ -148,16 +148,17 @@ console.log(revstr)
 // }//arrays
 
 //slice
+//slice is a part of an array starting from array element 1
+//if we give element no from there it should be started 
 arr14=[2,9,7,6,4,3]
 arr15=arr14.slice(4)
-console.log(arr15)//slice is a part of an array starting from array element 1
-//if we give element no from there it should be started 
+console.log(arr15) //[ 4, 3 ]
 
 //splice
 arr16=["jathin","kiran","murali","tharak","kishore"]
 arr16.splice(2,3,"sai","indigo") //here  2 represents in the 2nd place new element sould be added
 //where as 1 represents how many elements should be removed from the second element
-console.log(arr16)
+console.log(arr16) //[ 'jathin', 'kiran', 'sai', 'indigo' ]
 
 //map
 //array.map(callback(currentValue,index,array))
